@@ -26,9 +26,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-
     //注解 --- ButterKnife注解库：https://github.com/JakeWharton/butterknife
     implementation 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+
+    //权限申请2(群主Android轮子哥，维护中) https://github.com/getActivity/XXPermissions
+    implementation 'com.hjq:xxpermissions:5.5'
+
 
 }

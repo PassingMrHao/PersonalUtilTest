@@ -21,6 +21,7 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/btn_functionDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -74,7 +75,6 @@
                 android:textSize="15sp" />
 
 
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -114,10 +114,12 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/btn_update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:background="@drawable/btn_greenback"
+                android:text="版本更新"
                 android:textColor="#fff"
                 android:textSize="15sp" />
 

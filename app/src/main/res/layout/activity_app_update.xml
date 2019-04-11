@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".myactivity.AppUpdateAct">
+
+    <Button
+        android:id="@+id/update_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/btn_yellowback"
+        android:text="后台下载，通知栏显示进度"
+        android:textColor="#87361b"
+        android:textSize="19sp" />
+
+    <Button
+        android:id="@+id/update_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/btn_yellowback"
+        android:text="App界面内进行下载，显示进度"
+        android:textColor="#87361b"
+        android:textSize="19sp" />
+
+</LinearLayout>
