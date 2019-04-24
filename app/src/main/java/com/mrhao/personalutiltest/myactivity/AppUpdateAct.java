@@ -98,6 +98,9 @@ public class AppUpdateAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+                TextView tt=null;
+                tt.setText("696969");
                 if (XXPermissions.isHasPermission(AppUpdateAct.this, Permission.WRITE_EXTERNAL_STORAGE, Permission.WRITE_EXTERNAL_STORAGE) == true) {
 
 

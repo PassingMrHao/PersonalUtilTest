@@ -2,21 +2,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mrhao.personalutiltest">
 
+
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 运行时权限，要设置申请 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 运行时权限，要设置申请 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 运行时权限，要设置申请 -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 腾讯bugly及应用更新所需权限 -->
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" />  &lt;!&ndash;运行时权限，要设置申请&ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 
     <application
+        android:name=".myclass.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/meimei"
+        android:icon="@mipmap/knowledgetree"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/meimei"
+        android:roundIcon="@mipmap/knowledgetree"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".myactivity.AppUpdateAct"></activity>
+        <activity android:name=".myactivity.TencentX5WebActivity"></activity>
+        <activity android:name=".myactivity.AppUpdateAct" />
         <activity android:name=".myactivity.FunctionDescAct" />
         <activity android:name=".myactivity.LoadingActivity">
             <intent-filter>
@@ -27,15 +37,12 @@
         </activity>
         <activity android:name=".MainActivity" />
 
-
         <receiver android:name=".myinterface.UpdateInstallReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
                 <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
             </intent-filter>
         </receiver>
-
-
     </application>
 
 </manifest>

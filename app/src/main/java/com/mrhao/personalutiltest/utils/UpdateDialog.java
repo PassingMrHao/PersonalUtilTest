@@ -42,14 +42,12 @@ public class UpdateDialog {
                 }
             });
 
-
             ignore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     ud.dismiss();
                 }
             });
-
 
         }
     }

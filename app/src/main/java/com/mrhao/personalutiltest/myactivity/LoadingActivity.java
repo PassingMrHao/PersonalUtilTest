@@ -35,9 +35,10 @@ public class LoadingActivity extends AppCompatActivity {
     private void setBaseEvent() {
 
         //Android属性动画-渐变
-        ObjectAnimator alpha = ObjectAnimator.ofFloat(startImg, "alpha", 0f, 1f);
-        alpha.setDuration(2800);
+        final ObjectAnimator alpha = ObjectAnimator.ofFloat(startImg, "alpha", 0f, 1f);
+        alpha.setDuration(2000);
         alpha.start();
+
 
 
         new Handler().postDelayed(new Runnable() {
@@ -45,6 +46,7 @@ public class LoadingActivity extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(LoadingActivity.this, MainActivity.class));
                 finish();
+                alpha.cancel();
             }
         }, 2800);
 

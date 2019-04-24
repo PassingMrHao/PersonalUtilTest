@@ -7,6 +7,13 @@
     android:background="#f0f0f0"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/doctor_tree" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,6 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:text="包含功能说明"
                 android:textColor="#fff"
@@ -32,9 +40,23 @@
 
 
             <Button
+                android:id="@+id/Tencent_X5Webview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
+                android:background="@drawable/btn_greenback"
+                android:text="腾讯X5Webview"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -44,6 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -53,6 +76,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
+                android:background="@drawable/btn_greenback"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -62,14 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -79,6 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -88,15 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -118,6 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:text="版本更新"
                 android:textColor="#fff"
@@ -128,6 +148,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -137,6 +158,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -146,6 +168,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -155,6 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -164,6 +188,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -173,6 +198,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -182,6 +208,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
@@ -191,6 +218,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
+                android:alpha="0.7"
                 android:background="@drawable/btn_greenback"
                 android:textColor="#fff"
                 android:textSize="15sp" />
