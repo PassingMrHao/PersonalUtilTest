@@ -53,7 +53,7 @@ public class TencentX5WebActivity extends AppCompatActivity {
             }
         });
 
-        X5WebViewLoadUtil.loadurl(TencentX5WebActivity.this, tencentWeb, "https://www.baidu.com/");
+        X5WebViewLoadUtil.loadurl(TencentX5WebActivity.this, tencentWeb, "https://www.csdn.net/");
 
         tencentWeb.setWebViewClient(new WebViewClient() {
             @Override

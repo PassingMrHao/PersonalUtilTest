@@ -11,15 +11,14 @@ import android.widget.Toast;
 import com.hjq.permissions.OnPermission;
 import com.hjq.permissions.Permission;
 import com.hjq.permissions.XXPermissions;
-import com.mrhao.personalutiltest.MainActivity;
 import com.mrhao.personalutiltest.R;
 import com.mrhao.personalutiltest.myinterface.UpDateIne;
 import com.mrhao.personalutiltest.utils.DownLoadConfig;
 import com.mrhao.personalutiltest.utils.DownLoadManagerUtil;
 import com.mrhao.personalutiltest.utils.PublicDateValue;
 import com.mrhao.personalutiltest.utils.UpdateDialog;
-import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
+import com.tencent.bugly.beta.UpgradeInfo;
 
 import java.util.List;
 
@@ -34,8 +33,11 @@ public class AppUpdateAct extends AppCompatActivity {
     ImageView titleBack;
     @BindView(R.id.title_name)
     TextView titleName;
-    @BindView(R.id.bugly_update)
-    Button buglyUpdate;
+
+    @BindView(R.id.update_point)
+    ImageView updatePoint;
+    @BindView(R.id.bugly_up_point)
+    TextView buglyUpPoint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,36 @@ public class AppUpdateAct extends AppCompatActivity {
         getImportPerssion();
         ButterKnife.bind(this);
         setClickEvent();
+        CheckAPPUpdate();
+    }
+
+    //检查应用更新信息
+    private void CheckAPPUpdate() {
+
+        UpgradeInfo upgradeInfo = Beta.getUpgradeInfo();//获取本地已有升级策略（非实时，可用于界面红点展示）
+        if (upgradeInfo == null) {
+            //无升级信息
+            updatePoint.setImageResource(R.mipmap.up_graypoint);
+        } else {
+            updatePoint.setImageResource(R.mipmap.up_redpoint);
+        }
+
+        //腾讯bugly应用全量更新手动检测
+        buglyUpPoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (XXPermissions.isHasPermission(AppUpdateAct.this, Permission.WRITE_EXTERNAL_STORAGE, Permission.WRITE_EXTERNAL_STORAGE) == true) {
+
+                    Beta.checkUpgrade();//调用此方法手动检查应用
+
+                } else {
+
+                    getImportPerssion();
+                }
+            }
+        });
+
+
     }
 
 
@@ -107,33 +139,11 @@ public class AppUpdateAct extends AppCompatActivity {
         });
 
 
-        //腾讯bugly应用全量更新
-        buglyUpdate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (XXPermissions.isHasPermission(AppUpdateAct.this, Permission.WRITE_EXTERNAL_STORAGE, Permission.WRITE_EXTERNAL_STORAGE) == true) {
-
-                    //腾讯bugly应用更新初始化（由于未知bug，更新提示框最好设置到mainActivity）
-                    Bugly.init(getApplicationContext(), "9b5829370d", false);
-                    finish();
-
-                } else {
-
-                    getImportPerssion();
-                }
-
-
-            }
-        });
-
-
     }
 
 
     //获取必要权限
     private void getImportPerssion() {
-
 
         XXPermissions.with(AppUpdateAct.this)
                 .permission(Permission.WRITE_EXTERNAL_STORAGE, Permission.READ_EXTERNAL_STORAGE)
@@ -141,17 +151,16 @@ public class AppUpdateAct extends AppCompatActivity {
                     @Override
                     public void hasPermission(List<String> granted, boolean isAll) {
                         //权限申请成功后
-
                     }
 
                     @Override
                     public void noPermission(List<String> denied, boolean quick) {
+
                         //拒绝申请权限后
                         Toast.makeText(AppUpdateAct.this, "获取权限失败，部分功能无法正常使用", Toast.LENGTH_SHORT).show();
 
                     }
                 });
-
 
     }
 

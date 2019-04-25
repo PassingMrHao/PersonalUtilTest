@@ -12,7 +12,7 @@
     <Button
         android:id="@+id/update_btn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="28dp"
         android:layout_marginRight="28dp"
@@ -22,18 +22,32 @@
         android:textSize="19sp" />
 
 
-    <Button
-        android:id="@+id/bugly_update"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginRight="28dp"
-        android:background="@drawable/btn_yellowback"
-        android:text="第三方腾讯Bugly应用全量更新"
-        android:textAllCaps="false"
-        android:textColor="#87361b"
-        android:textSize="19sp" />
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/bugly_up_point"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="28dp"
+            android:background="@drawable/btn_yellowback"
+            android:gravity="center"
+            android:text="第三方Bugly检查更新(加界面红点展示)"
+            android:textColor="#87361b"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/update_point"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
 
 
 </LinearLayout>

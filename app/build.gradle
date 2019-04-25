@@ -6,7 +6,7 @@ android {
         applicationId "com.mrhao.personalutiltest"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 100
+        versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
@@ -46,7 +46,11 @@ dependencies {
     implementation 'com.hjq:xxpermissions:5.5'
 
 
-    //腾讯bugly异常上报+应用更新
+
+    //implementation 'com.tencent.bugly:crashreport:latest.release'  //Bugly异常上报 SDK库
+
+
+    //腾讯bugly升级SDK(已包含异常上报)
     implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
     implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
 

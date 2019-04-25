@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:lineSpacingExtra="2dp"
-            android:text="3.腾讯X5WebView (TencentX5WebActivity);"
+            android:text="3.腾讯X5WebView、自定义进度条样式 (TencentX5WebActivity);"
             android:textAllCaps="false"
             android:textColor="#707070"
             android:textSize="17sp" />
