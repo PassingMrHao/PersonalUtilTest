@@ -4,19 +4,22 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hjq.permissions.OnPermission;
 import com.hjq.permissions.Permission;
 import com.hjq.permissions.XXPermissions;
+import com.mrhao.personalutiltest.MainActivity;
 import com.mrhao.personalutiltest.R;
 import com.mrhao.personalutiltest.myinterface.UpDateIne;
 import com.mrhao.personalutiltest.utils.DownLoadConfig;
 import com.mrhao.personalutiltest.utils.DownLoadManagerUtil;
 import com.mrhao.personalutiltest.utils.PublicDateValue;
 import com.mrhao.personalutiltest.utils.UpdateDialog;
-
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.beta.Beta;
 
 import java.util.List;
 
@@ -27,8 +30,12 @@ public class AppUpdateAct extends AppCompatActivity {
 
     @BindView(R.id.update_btn)
     Button updateBtn;
-    @BindView(R.id.update_app)
-    Button updateApp;
+    @BindView(R.id.title_back)
+    ImageView titleBack;
+    @BindView(R.id.title_name)
+    TextView titleName;
+    @BindView(R.id.bugly_update)
+    Button buglyUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +48,13 @@ public class AppUpdateAct extends AppCompatActivity {
 
 
     private void setClickEvent() {
+        titleName.setText("应用版本更新");
+        titleBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         //在后台进行下载操作，通知栏显示下载进度
         updateBtn.setOnClickListener(new View.OnClickListener() {
@@ -89,29 +103,30 @@ public class AppUpdateAct extends AppCompatActivity {
 
                 }
 
-
             }
         });
 
-        //在App界面/活动窗口中显示下载进度
-        updateApp.setOnClickListener(new View.OnClickListener() {
+
+        //腾讯bugly应用全量更新
+        buglyUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
-                TextView tt=null;
-                tt.setText("696969");
                 if (XXPermissions.isHasPermission(AppUpdateAct.this, Permission.WRITE_EXTERNAL_STORAGE, Permission.WRITE_EXTERNAL_STORAGE) == true) {
 
+                    //腾讯bugly应用更新初始化（由于未知bug，更新提示框最好设置到mainActivity）
+                    Bugly.init(getApplicationContext(), "9b5829370d", false);
+                    finish();
 
                 } else {
 
                     getImportPerssion();
-
                 }
+
 
             }
         });
+
 
     }
 
