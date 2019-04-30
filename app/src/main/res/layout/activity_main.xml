@@ -53,6 +53,7 @@
 
 
             <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -63,6 +64,7 @@
 
 
             <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -73,6 +75,7 @@
 
 
             <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -82,26 +85,7 @@
                 android:textSize="15sp" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -112,6 +96,30 @@
 
 
             <Button
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:alpha="0.7"
+                android:background="@drawable/btn_greenback"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:alpha="0.7"
+                android:background="@drawable/btn_greenback"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+
+            <Button
+
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -145,6 +153,20 @@
 
 
             <Button
+                android:id="@+id/btn_java"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:alpha="0.7"
+                android:background="@drawable/btn_greenback"
+                android:text="HeadFirst》Java随练"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+
+            <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -155,6 +177,7 @@
 
 
             <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -165,6 +188,7 @@
 
 
             <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -175,6 +199,7 @@
 
 
             <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -185,6 +210,7 @@
 
 
             <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -195,6 +221,7 @@
 
 
             <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -205,16 +232,7 @@
 
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"

@@ -32,9 +32,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="10dp"
             android:lineSpacingExtra="2dp"
-            android:text="2.版本更新封装，接口、资源文件、权限、工具类等(AppUpdateAct) ;"
+            android:text="2.腾讯Bugly全量更新+自定义版本更新封装，接口、资源文件、权限、工具类等(AppUpdateAct) ;"
             android:textAllCaps="false"
             android:textColor="#707070"
             android:textSize="17sp" />
@@ -43,9 +43,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="10dp"
             android:lineSpacingExtra="2dp"
             android:text="3.腾讯X5WebView、自定义进度条样式 (TencentX5WebActivity);"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="2dp"
+            android:text="4.Java日常,《HeadFirst》阅读随练(JavaExeActivity)"
             android:textAllCaps="false"
             android:textColor="#707070"
             android:textSize="17sp" />

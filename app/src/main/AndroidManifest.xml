@@ -6,8 +6,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 运行时权限，要设置申请 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 运行时权限，要设置申请 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 运行时权限，要设置申请 -->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <!-- 腾讯bugly及应用更新所需权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 腾讯bugly及应用更新所需权限 -->
     <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" />  &lt;!&ndash;运行时权限，要设置申请&ndash;&gt; -->
     <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -22,7 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".myactivity.TencentX5WebActivity"></activity>
+        <activity android:name=".myactivity.JavaExeActivity"></activity>
+        <activity android:name=".myactivity.TencentX5WebActivity" />
         <activity android:name=".myactivity.AppUpdateAct" />
         <activity android:name=".myactivity.FunctionDescAct" />
         <activity android:name=".myactivity.LoadingActivity">
@@ -39,16 +39,11 @@
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
                 <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
             </intent-filter>
-        </receiver>
-
-
-        <!-- 腾讯bugly应用升级Activity配置 -->
+        </receiver> <!-- 腾讯bugly应用升级Activity配置 -->
         <activity
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
-            android:theme="@android:style/Theme.Translucent" />
-
-        <!-- 腾讯bugly应用升级FileProvider配置 -->
+            android:theme="@android:style/Theme.Translucent" /> <!-- 腾讯bugly应用升级FileProvider配置 -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileProvider"
@@ -56,15 +51,8 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
-
-
-
     </application>
-
-
-
-
 
 </manifest>

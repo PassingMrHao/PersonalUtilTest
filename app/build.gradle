@@ -45,15 +45,13 @@ dependencies {
     //权限申请2(群主Android轮子哥，维护中) https://github.com/getActivity/XXPermissions
     implementation 'com.hjq:xxpermissions:5.5'
 
-
-
     //implementation 'com.tencent.bugly:crashreport:latest.release'  //Bugly异常上报 SDK库
 
-
     //腾讯bugly升级SDK(已包含异常上报)
-    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
-    implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
-
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
 
 
 }

@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.mrhao.personalutiltest.myactivity.AppUpdateAct;
 import com.mrhao.personalutiltest.myactivity.FunctionDescAct;
+import com.mrhao.personalutiltest.myactivity.JavaExeActivity;
 import com.mrhao.personalutiltest.myactivity.TencentX5WebActivity;
 
 import butterknife.BindView;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnUpdate;
     @BindView(R.id.Tencent_X5Webview)
     Button TencentX5Webview;
+    @BindView(R.id.btn_java)
+    Button btnJava;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivity(new Intent(MainActivity.this, TencentX5WebActivity.class));
+            }
+        });
+
+
+        //《HeadFirst》Java随练
+        btnJava.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, JavaExeActivity.class));
             }
         });
 
