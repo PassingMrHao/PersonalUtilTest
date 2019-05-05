@@ -16,7 +16,6 @@ import com.mrhao.personalutiltest.R;
 import com.mrhao.personalutiltest.utils.X5WebViewLoadUtil;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebView;
-import com.tencent.smtt.sdk.WebViewClient;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +35,8 @@ public class TencentX5WebActivity extends AppCompatActivity {
     @BindView(R.id.relay_progress)
     RelativeLayout relayProgress;
 
+    String baseurl = "https://www.csdn.net/";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,22 +54,7 @@ public class TencentX5WebActivity extends AppCompatActivity {
             }
         });
 
-        X5WebViewLoadUtil.loadurl(TencentX5WebActivity.this, tencentWeb, "https://www.csdn.net/");
-//        X5WebViewLoadUtil.loadurl(TencentX5WebActivity.this, tencentWeb, "https://www.baidu.com/");
-//        X5WebViewLoadUtil.loadurl(TencentX5WebActivity.this, tencentWeb, "about:blank");
-
-//        tencentWeb.setWebViewClient(new WebViewClient() {
-//
-//
-//            @Override
-//            public void onPageStarted(WebView webView, String s, Bitmap bitmap) {
-//
-//            }
-//            @Override
-//            public void onPageFinished(WebView webView, String s) {
-//                titleName.setText(webView.getTitle());
-//            }
-//        });
+        X5WebViewLoadUtil.loadurl(TencentX5WebActivity.this, tencentWeb, baseurl);
 
         tencentWeb.setWebChromeClient(new WebChromeClient() {
             @Override
@@ -79,9 +65,10 @@ public class TencentX5WebActivity extends AppCompatActivity {
                     proTv.setText(webView.getProgress() + " %");
                     if (webView.getProgress() == 100) {
                         relayProgress.setVisibility(View.GONE);
-
                     }
-                } }
+
+                }
+            }
         });
 
 
@@ -97,7 +84,8 @@ public class TencentX5WebActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (tencentWeb.getUrl().equals("https://www.csdn.net/")) {
+        if (tencentWeb.getUrl().equals(baseurl)) {
+            //加载基本baseUrl
             finish();
         }
         tencentWeb.goBack();
