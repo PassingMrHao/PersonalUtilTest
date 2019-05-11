@@ -4,14 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.gyf.immersionbar.ImmersionBar;
 import com.mrhao.personalutiltest.myactivity.AppUpdateAct;
+import com.mrhao.personalutiltest.myactivity.DrawerLayoutActivity;
 import com.mrhao.personalutiltest.myactivity.FunctionDescAct;
 import com.mrhao.personalutiltest.myactivity.JavaExeActivity;
 import com.mrhao.personalutiltest.myactivity.TencentX5WebActivity;
+import com.mrhao.personalutiltest.myclass.BaseActivity;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.beta.UpgradeInfo;
 import com.tencent.bugly.beta.ui.UILifecycleListener;
@@ -19,7 +24,7 @@ import com.tencent.bugly.beta.ui.UILifecycleListener;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.btn_functionDesc)
     Button btnFunctionDesc;
@@ -29,10 +34,13 @@ public class MainActivity extends AppCompatActivity {
     Button TencentX5Webview;
     @BindView(R.id.btn_java)
     Button btnJava;
+    @BindView(R.id.btn_drawerLayout)
+    Button btnDrawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setBaseEvent();
@@ -62,13 +70,12 @@ public class MainActivity extends AppCompatActivity {
         TencentX5Webview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 startActivity(new Intent(MainActivity.this, TencentX5WebActivity.class));
             }
         });
 
 
-        //《HeadFirst》Java随练
+        //<Head First Java>阅读随练
         btnJava.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,50 +85,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //侧滑菜单：DrawerLayout抽屉布局实现侧滑菜单+第三方框架侧滑菜单
 
-
-
-
-
-
-        Beta.upgradeDialogLifecycleListener = new UILifecycleListener<UpgradeInfo>() {
+        btnDrawerLayout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCreate(Context context, View view, UpgradeInfo upgradeInfo) {
+            public void onClick(View v) {
 
+                startActivity(new Intent(MainActivity.this, DrawerLayoutActivity.class));
             }
+        });
 
-            @Override
-            public void onStart(Context context, View view, UpgradeInfo upgradeInfo) {
 
-            }
-
-            @Override
-            public void onResume(Context context, View view, UpgradeInfo upgradeInfo) {
-                // 注：可通过这个回调方式获取布局的控件，如果设置了id，可通过findViewById方式获取，如果设置了tag，可以通过findViewWithTag，
-
-                // 通过tag方式获取控件，并更改布局内容
-                TextView textView = (TextView) view.findViewWithTag("beta_cancel_button");
-                TextView textView2 = (TextView) view.findViewWithTag("beta_confirm_button");
-                textView.setText("忽略此次提醒");
-                textView2.setText("后台更新安装");
-
-            }
-
-            @Override
-            public void onPause(Context context, View view, UpgradeInfo upgradeInfo) {
-
-            }
-
-            @Override
-            public void onStop(Context context, View view, UpgradeInfo upgradeInfo) {
-
-            }
-
-            @Override
-            public void onDestroy(Context context, View view, UpgradeInfo upgradeInfo) {
-
-            }
-        };
     }
 
 

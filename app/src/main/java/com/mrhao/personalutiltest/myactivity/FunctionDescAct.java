@@ -7,11 +7,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mrhao.personalutiltest.R;
+import com.mrhao.personalutiltest.myclass.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FunctionDescAct extends AppCompatActivity {
+public class FunctionDescAct extends BaseActivity {
 
     @BindView(R.id.title_back)
     ImageView titleBack;

@@ -7,13 +7,15 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
+import com.gyf.immersionbar.ImmersionBar;
 import com.mrhao.personalutiltest.MainActivity;
 import com.mrhao.personalutiltest.R;
+import com.mrhao.personalutiltest.myclass.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class LoadingActivity extends AppCompatActivity {
+public class LoadingActivity extends BaseActivity {
 
     @BindView(R.id.start_img)
     ImageView startImg;
@@ -23,6 +25,7 @@ public class LoadingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
         ButterKnife.bind(this);
+
         startImg.post(new Runnable() {
             @Override
             public void run() {

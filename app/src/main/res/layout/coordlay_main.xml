@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qiantao.coordinatormenu.MainView
+    android:id="@+id/mainview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#EDE6DC">
+
+            <ImageView
+                android:id="@+id/mainview_menu"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/cehua_menu" />
+
+            <ImageView
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_alignParentBottom="true"
+                android:src="@mipmap/cutegirl2" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="12dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/content" />
+
+    </LinearLayout>
+
+</com.qiantao.coordinatormenu.MainView>

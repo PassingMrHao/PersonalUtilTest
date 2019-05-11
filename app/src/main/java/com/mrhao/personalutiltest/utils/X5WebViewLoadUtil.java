@@ -42,30 +42,33 @@ public class X5WebViewLoadUtil {
         tencentWeb.getSettings().setBuiltInZoomControls(true); //设置内置的缩放控件。若为false，则该WebView不可缩放
         tencentWeb.getSettings().setDisplayZoomControls(true); //隐藏原生的缩放控件
         tencentWeb.getSettings().setBlockNetworkImage(false);//解决图片不显示
-        tencentWeb.getSettings().setLoadsImagesAutomatically(true); //支持自动加载图片
 
+        // 加快HTML网页加载完成的速度，等页面finish再加载图片
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            webSetting.setLoadsImagesAutomatically(true);
+        } else {
+            webSetting.setLoadsImagesAutomatically(false);
+        }
         //WebViewClient
         tencentWeb.setWebViewClient(new WebViewClient() {
+
             @Override
             public boolean shouldOverrideUrlLoading(final WebView view, final String url) {
-                WebView.HitTestResult hit = view.getHitTestResult();
 
+                WebView.HitTestResult hit = view.getHitTestResult();
                 //hit.getExtra()为null或者hit.getType() == 0都表示即将加载的URL会发生重定向，需要做拦截处理
                 if (TextUtils.isEmpty(hit.getExtra()) || hit.getType() == 0) {
                     //通过判断开头协议就可解决大部分重定向问题了，有另外的需求可以在此判断下操作
                     Log.e("重定向", "重定向: " + hit.getType() + " && EXTRA（）" + hit.getExtra() + "------");
                     Log.e("重定向", "GetURL: " + view.getUrl() + "\n" +"getOriginalUrl()"+ view.getOriginalUrl());
                     Log.d("重定向", "URL: " + url);
-
                 }
 
-                if (url.startsWith("http://") || url.startsWith("https://")) {
-                    //加载的url是http/https协议地址
+                if (url.startsWith("http://") || url.startsWith("https://")) { //加载的url是http/https协议地址
                     view.loadUrl(url);
                     return false; //返回false表示此url默认由系统处理,url未加载完成，会继续往下走
 
-                } else {
-                    //加载的url是自定义协议地址
+                } else { //加载的url是自定义协议地址
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                         context.startActivity(intent);
@@ -103,20 +106,22 @@ public class X5WebViewLoadUtil {
         tencentWeb.loadUrl(baseurl);
 
 
+        /**
+         * setDownloadListener()是对加载的url是下载地址时的回调
+         */
         tencentWeb.setDownloadListener(new DownloadListener() {
             @Override
-            public void onDownloadStart(String s, String s1, String s2, String s3, long l) {
+            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
 
-                // 上面的参数中，s对应文件下载地址，s3对应下载文件的MIME类型
+                // 上面的参数中，url对应文件下载地址，mimetype对应下载文件的MIME类型
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                Uri uri = Uri.parse(s);
+                Uri uri = Uri.parse(url);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(uri);
                 context.startActivity(intent);
 
             }
         });
-
 
     }
 

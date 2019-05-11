@@ -110,6 +110,7 @@
                 </android.support.v4.widget.NestedScrollView>
 
                 <TextView
+                    android:id="@+id/upgrade_ignore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -119,21 +120,20 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:tag="beta_cancel_button"
-                    android:text="忽略此次提醒"
                     android:textColor="#fff" />
 
                 <TextView
+                    android:id="@+id/upgrade_update"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginBottom="15dp"
-                    android:background="@drawable/btn_update"
+                    android:background="@drawable/blue_update"
                     android:gravity="center"
                     android:padding="10dp"
                     android:tag="beta_confirm_button"
-                    android:text="后台更新安装"
                     android:textColor="#fff" />
             </LinearLayout>
 

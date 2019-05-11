@@ -59,6 +59,15 @@
             android:textAllCaps="false"
             android:textColor="#707070"
             android:textSize="17sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="2dp"
+            android:text="5.侧滑菜单，DrawerLayout实现，第三方框架仿QQ6.X侧滑效果(DrawerLayoutActivity)"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textSize="17sp" />
 
 
     </LinearLayout>

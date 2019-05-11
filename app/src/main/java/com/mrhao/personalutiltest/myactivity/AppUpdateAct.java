@@ -1,5 +1,6 @@
 package com.mrhao.personalutiltest.myactivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +13,7 @@ import com.hjq.permissions.OnPermission;
 import com.hjq.permissions.Permission;
 import com.hjq.permissions.XXPermissions;
 import com.mrhao.personalutiltest.R;
+import com.mrhao.personalutiltest.myclass.BaseActivity;
 import com.mrhao.personalutiltest.myinterface.UpDateIne;
 import com.mrhao.personalutiltest.utils.DownLoadConfig;
 import com.mrhao.personalutiltest.utils.DownLoadManagerUtil;
@@ -19,13 +21,14 @@ import com.mrhao.personalutiltest.utils.PublicDateValue;
 import com.mrhao.personalutiltest.utils.UpdateDialog;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.beta.UpgradeInfo;
+import com.tencent.bugly.beta.ui.UILifecycleListener;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AppUpdateAct extends AppCompatActivity {
+public class AppUpdateAct extends BaseActivity {
 
     @BindView(R.id.update_btn)
     Button updateBtn;
@@ -46,7 +49,7 @@ public class AppUpdateAct extends AppCompatActivity {
         getImportPerssion();
         ButterKnife.bind(this);
         setClickEvent();
-        CheckAPPUpdate();
+        CheckAPPUpdate();//腾讯bugly检查应用升级信息
     }
 
     //检查应用更新信息
@@ -67,6 +70,7 @@ public class AppUpdateAct extends AppCompatActivity {
                 if (XXPermissions.isHasPermission(AppUpdateAct.this, Permission.WRITE_EXTERNAL_STORAGE, Permission.WRITE_EXTERNAL_STORAGE) == true) {
 
                     Beta.checkUpgrade();//调用此方法手动检查应用
+
 
                 } else {
 

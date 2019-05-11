@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mrhao.personalutiltest.R;
+import com.mrhao.personalutiltest.myclass.BaseActivity;
 import com.mrhao.personalutiltest.utils.X5WebViewLoadUtil;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebView;
@@ -20,7 +21,7 @@ import com.tencent.smtt.sdk.WebView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class TencentX5WebActivity extends AppCompatActivity {
+public class TencentX5WebActivity extends BaseActivity {
 
     @BindView(R.id.title_back)
     ImageView titleBack;
@@ -36,6 +37,7 @@ public class TencentX5WebActivity extends AppCompatActivity {
     RelativeLayout relayProgress;
 
     String baseurl = "https://www.csdn.net/";
+//    String baseurl = "https://m.9665299.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

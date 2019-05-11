@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f0f0f0"
+    android:paddingTop="20dp"
     tools:context=".MainActivity">
 
     <ImageView
@@ -14,238 +15,249 @@
         android:adjustViewBounds="true"
         android:src="@mipmap/doctor_tree" />
 
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_functionDesc"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:text="包含功能说明"
-                android:textColor="#fff"
-                android:textSize="15sp" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_functionDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="包含功能说明"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
 
 
-            <Button
-                android:id="@+id/Tencent_X5Webview"
+                <Button
+                    android:id="@+id/Tencent_X5Webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="腾讯X5Webview"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+
+                <Button
+                    android:id="@+id/btn_drawerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="侧滑菜单"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="17sp" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:text="腾讯X5Webview"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="15sp" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="版本更新"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
 
 
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
+                <Button
+                    android:id="@+id/btn_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="HeadFirst》Java随练"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
 
 
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:lines="2"
+                    android:background="@drawable/btn_greenback"
+                    android:text="MD风格BottomNavigationView\n底部菜单"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
 
 
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
 
 
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
 
 
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
 
 
-            <Button
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
 
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/btn_update"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:text="版本更新"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:id="@+id/btn_java"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:text="HeadFirst》Java随练"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="14sp" />
-
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:alpha="0.7"
-                android:background="@drawable/btn_greenback"
-                android:textColor="#fff"
-                android:textSize="15sp" />
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
+    </ScrollView>
 
 </RelativeLayout>
