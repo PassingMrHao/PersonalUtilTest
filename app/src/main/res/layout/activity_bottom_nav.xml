@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myactivity.BottomNavActivity">
+
+
+    <com.mrhao.personalutiltest.widget.NoScrollViewPager
+        android:id="@+id/vp_home_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/md_bottom"
+        android:fitsSystemWindows="false" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/md_bottom"
+        android:background="#606060" />
+
+
+    <!--项目API >= 28时，添加 app:labelVisibilityMode="labeled" 属性
+可解决item > 4时，滑动位移的问题。自己编写menu图片itemTextColor的select属性，调用setItemIconTintList(null)方法
+设置为null，不使用图标默认变色-->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/md_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="#DAE0F1"
+        app:itemTextColor="@drawable/mybottom_menu_textselect"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/mydesign_bottom_menu" />
+
+
+</RelativeLayout>

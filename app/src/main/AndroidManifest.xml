@@ -13,16 +13,17 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:resizeableActivity="true"
         android:name=".myclass.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/knowledgetree"
         android:label="@string/app_name"
+        android:resizeableActivity="true"
         android:roundIcon="@mipmap/knowledgetree"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".myactivity.CoordinatorMenuAct"></activity>
+        <activity android:name=".myactivity.BottomNavActivity"></activity>
+        <activity android:name=".myactivity.CoordinatorMenuAct" />
         <activity android:name=".myactivity.DrawerLayoutActivity" />
         <activity android:name=".myactivity.JavaExeActivity" />
         <activity android:name=".myactivity.TencentX5WebActivity" />
@@ -55,13 +56,10 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
-        </provider>
-
-        <!--适配小米（xiaomi）刘海屏-->
+        </provider> <!-- 适配小米（xiaomi）刘海屏 -->
         <meta-data
             android:name="notch.config"
             android:value="portrait|landscape" />
-
     </application>
 
 </manifest>

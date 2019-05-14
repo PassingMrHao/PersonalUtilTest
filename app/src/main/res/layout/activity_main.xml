@@ -175,13 +175,14 @@
 
 
                 <Button
+                    android:id="@+id/btn_bootommenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
-                    android:lines="2"
                     android:background="@drawable/btn_greenback"
-                    android:text="MD风格BottomNavigationView\n底部菜单"
+                    android:lines="2"
+                    android:text="MD风格BottomNavigationView\n底部菜单/导航栏"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="13sp" />

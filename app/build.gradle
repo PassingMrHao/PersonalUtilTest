@@ -56,9 +56,11 @@ dependencies {
     //仿_QQ6.x侧滑菜单
     implementation 'com.github.bestTao:CoordinatorMenu:v1.0.2'
 
-
     // 沉浸式状态栏基础依赖包，必须要依赖
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta02'
+
+    //design-包含MD风格控件
+    implementation "com.android.support:design:28.0.0"
 
 
 }
