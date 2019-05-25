@@ -49,9 +49,9 @@ public class BottomNavActivity extends AppCompatActivity {
         //往listfragment列表中添加fragment页面
         fragmentList.add(new BottomMenuFragment1()); //首页
         fragmentList.add(new BottomMenuFragment2()); //发现
+        fragmentList.add(new BottomMenuFragment2()); //发现
         fragmentList.add(new BottomMenuFragment3()); //探索
         fragmentList.add(new BottomMenuFragment4()); //我的
-
 
         ad = new BottomMenuPageAdapter(getSupportFragmentManager(), this, fragmentList);
         vpHomePager.setAdapter(ad);
@@ -72,10 +72,10 @@ public class BottomNavActivity extends AppCompatActivity {
                         vpHomePager.setCurrentItem(1);
                         return true;
                     case R.id.bottommenu3:
-                        vpHomePager.setCurrentItem(2);
+                        vpHomePager.setCurrentItem(3);
                         return true;
                     case R.id.bottommenu4:
-                        vpHomePager.setCurrentItem(3);
+                        vpHomePager.setCurrentItem(4);
                         return true;
                     default:
                         break;
@@ -100,7 +100,12 @@ public class BottomNavActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 //滑动停止时调用
-                mdBottom.getMenu().getItem(position).setChecked(true);// 当滑动到某一位置，导航栏对应位置被按下
+                if(position!=2){
+                    mdBottom.getMenu().getItem(position).setChecked(true);// 当滑动到某一位置，导航栏对应位置被按下
+                }else {
+
+                }
+
                 Log.e("dddd6669996969", "onPageSelected: " + position);
 
                 //这里使用navigation.setSelectedItemId(position);无效，

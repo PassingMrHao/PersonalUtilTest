@@ -11,64 +11,116 @@
     <include layout="@layout/activity_title" />
 
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:scrollbars="none">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:lineSpacingExtra="2dp"
-            android:text="1.透明度渐变的属性动画(LoadingActivity) ;"
-            android:textAllCaps="false"
-            android:textColor="#707070"
-            android:textSize="17sp" />
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="1.透明度渐变的属性动画(LoadingActivity) ;自定义dialog模板、仿iOS风格退出框(MainActivity)"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textSize="17sp" />
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:lineSpacingExtra="2dp"
-            android:text="2.腾讯Bugly全量更新+自定义版本更新封装，接口、资源文件、权限、工具类等(AppUpdateAct) ;"
-            android:textAllCaps="false"
-            android:textColor="#707070"
-            android:textSize="17sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="2.腾讯Bugly全量更新+自定义版本更新封装，接口、资源文件、权限、工具类等(AppUpdateAct) ;"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textSize="17sp" />
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:lineSpacingExtra="2dp"
-            android:text="3.腾讯X5WebView、自定义进度条样式 (TencentX5WebActivity);"
-            android:textAllCaps="false"
-            android:textColor="#707070"
-            android:textSize="17sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="3.腾讯X5WebView、自定义进度条样式 (TencentX5WebActivity);"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textSize="17sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:lineSpacingExtra="2dp"
-            android:text="4.Java日常,《HeadFirst》阅读随练(JavaExeActivity)"
-            android:textAllCaps="false"
-            android:textColor="#707070"
-            android:textSize="17sp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:lineSpacingExtra="2dp"
-            android:text="5.侧滑菜单，DrawerLayout实现，第三方框架仿QQ6.X侧滑效果(DrawerLayoutActivity)"
-            android:textAllCaps="false"
-            android:textColor="#707070"
-            android:textSize="17sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="4.Java日常,《HeadFirst》阅读随练(JavaExeActivity)"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="5.侧滑菜单，DrawerLayout实现，第三方框架仿QQ6.X侧滑效果(DrawerLayoutActivity)"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="6.MD风格的底部标题栏-BottomNavigationView，禁用了水平滑动的自定义Viewpager-NoScrollViewPager(BottomNavActivity)"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textSize="17sp" />
 
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="7.水波纹效果，贝塞尔曲线(WaterRippleActivity)。CSDN地址：https://github.com/itrenjunhua/WaveView"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="8.APP换肤：夜间模式和白天模式(ChangeSkinActivity)"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="2dp"
+                android:text="9.控件GradientDrawable的基础用法，动态设置view背景颜色(GradientDrawableActivity)"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
 </LinearLayout>

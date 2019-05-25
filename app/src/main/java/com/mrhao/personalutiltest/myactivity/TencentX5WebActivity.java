@@ -68,8 +68,10 @@ public class TencentX5WebActivity extends BaseActivity {
                     if (webView.getProgress() == 100) {
                         relayProgress.setVisibility(View.GONE);
                     }
-
                 }
+
+
+
             }
         });
 

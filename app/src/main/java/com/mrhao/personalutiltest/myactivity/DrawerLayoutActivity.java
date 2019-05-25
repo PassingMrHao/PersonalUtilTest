@@ -3,8 +3,6 @@ package com.mrhao.personalutiltest.myactivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +11,8 @@ import android.widget.TextView;
 
 import com.mrhao.personalutiltest.R;
 import com.mrhao.personalutiltest.myclass.BaseActivity;
+import com.mrhao.personalutiltest.myinterface.FinishActIne;
+import com.mrhao.personalutiltest.utils.CopyIOSDialog;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -94,6 +94,7 @@ public class DrawerLayoutActivity extends BaseActivity {
             layDrawer.closeDrawers(); //关闭
 
         } else {
+
             super.onBackPressed();//父类方法：直接返回
         }
 

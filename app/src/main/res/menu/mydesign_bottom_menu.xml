@@ -15,6 +15,11 @@
         android:icon="@drawable/bottomenu_back2"
         android:title="menu2"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/bottommenu_middle"
+        android:enabled="true"
+        android:icon="@null"
+        android:title="" />
 
     <item
         android:id="@+id/bottommenu3"

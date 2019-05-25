@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".myactivity.WaterRippleActivity">
+
+    <com.mrhao.personalutiltest.utils.WaterRippleView
+        android:id="@+id/water_ripple"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        app:borderColor="#00A4FF"
+        app:borderWidth="2dp"
+        app:intervalTime="3"
+        app:precent="0.8"
+        app:showShape="circle"
+        app:textColor="#31353E"
+        app:textSize="18sp"
+        app:wave1Color="#00A4FF"
+        app:wave2Color="#6000A4FF" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blueback"
+            android:text="开始"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/bt_stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blueback"
+            android:text="暂停"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/bt_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blueback"
+            android:text="重置"
+            android:textColor="#fff" />
+    </LinearLayout>
+</LinearLayout>

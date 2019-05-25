@@ -22,7 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".myactivity.BottomNavActivity"></activity>
+        <activity android:name=".myactivity.GradientDrawableActivity"></activity>
+        <activity
+            android:name=".myactivity.ChangeSkinActivity"
+            android:theme="@style/myNightTheme2" />
+        <activity android:name=".myactivity.WaterRippleActivity" />
+        <activity android:name=".myactivity.BottomNavActivity" />
         <activity android:name=".myactivity.CoordinatorMenuAct" />
         <activity android:name=".myactivity.DrawerLayoutActivity" />
         <activity android:name=".myactivity.JavaExeActivity" />

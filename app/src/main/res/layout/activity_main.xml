@@ -73,25 +73,29 @@
 
 
                 <Button
+                    android:id="@+id/btn_waterripple"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text="水波纹效果(贝塞尔曲线)"
                     android:textAllCaps="false"
                     android:textColor="#fff"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
 
                 <Button
+                    android:id="@+id/btn_gradraw"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text="GradientDrawable常规用法"
                     android:textAllCaps="false"
                     android:textColor="#fff"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -189,11 +193,13 @@
 
 
                 <Button
+                    android:id="@+id/btn_app_skin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text="App换肤/更换主题"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="15sp" />

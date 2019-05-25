@@ -76,6 +76,19 @@ public class MyUtils {
     }
 
 
+    //获取最终想要得到的dp值对应的int型基本函数
+    public static int dip2px(float dpValue,Context context) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
+
+    //获取最终想要得到的px值对应的int型基本函数
+    public static int px2dip(float pxValue,Context context) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (pxValue / scale + 0.5f);
+    }
+
+
 
 
 

@@ -37,7 +37,8 @@ public final class NoScrollViewPager extends ViewPager {
     public boolean onTouchEvent(MotionEvent ev) {
         super.onTouchEvent(ev);
         // 不处理这个事件
-        return true;
+//        return true;//不禁用viewpage滑动
+        return false;//禁用viewpage滑动
     }
 
 

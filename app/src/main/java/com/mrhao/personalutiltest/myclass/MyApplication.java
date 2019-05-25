@@ -1,26 +1,12 @@
 package com.mrhao.personalutiltest.myclass;
 
-import android.app.Activity;
 import android.app.Application;
-import android.content.Context;
-import android.support.v4.view.LayoutInflaterFactory;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.support.v7.app.AppCompatDelegate;
 
-import com.gyf.immersionbar.ImmersionBar;
 import com.mrhao.personalutiltest.MainActivity;
 import com.mrhao.personalutiltest.R;
-import com.mrhao.personalutiltest.myactivity.AppUpdateAct;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
-import com.tencent.bugly.beta.UpgradeInfo;
-import com.tencent.bugly.beta.ui.UILifecycleListener;
-
-import java.util.zip.Inflater;
-
 
 public class MyApplication extends Application {
 
@@ -33,6 +19,13 @@ public class MyApplication extends Application {
 
         //沉浸式标题栏(Activity)，需要适配全面屏和刘海屏，
         // 在manifest的Application节点中加入  android:resizeableActivity="true"
+
+        initSkinSupport();//skin-support 换肤
+    }
+
+    private void initSkinSupport() {
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
     }
 
