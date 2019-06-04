@@ -26,7 +26,9 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration{
 
 
 
+    //用法 RecyclerView.addItemDecoration(new CommonItemDecoration(30, 50));
     public CommonItemDecoration(int horizontalSpace, int verticalSpace) {
+        //整个RecyclerView与左右两侧的间距，整个RecyclerView与上下的间距，horizontalSpace：左右间距，verticalSpace：上下间距
         this(horizontalSpace, verticalSpace, 0, 0, 0, 0);
     }
 

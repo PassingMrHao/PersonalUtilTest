@@ -1,6 +1,5 @@
 package com.mrhao.personalutiltest.myactivity;
 
-import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;

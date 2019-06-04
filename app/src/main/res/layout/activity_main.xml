@@ -206,14 +206,16 @@
 
 
                 <Button
+                    android:id="@+id/btn_eventbus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text="EventBus用法探究"
                     android:textAllCaps="false"
                     android:textColor="#fff"
-                    android:textSize="15sp" />
+                    android:textSize="18sp" />
 
 
                 <Button
