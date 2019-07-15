@@ -29,7 +29,6 @@ public class GradientDrawableUseUtil {
         } else {
             view.setBackgroundDrawable(drawable);
         }
-
         return drawable;
     }
 
@@ -45,16 +44,11 @@ public class GradientDrawableUseUtil {
         //判断当前版本号，版本号大于等于16，使用setBackground；版本号小于16，使用setBackgroundDrawable。
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             view.setBackground(drawable);
-
         } else {
             view.setBackgroundDrawable(drawable);
-
         }
-
         return drawable;
     }
-
-
 
 }
 

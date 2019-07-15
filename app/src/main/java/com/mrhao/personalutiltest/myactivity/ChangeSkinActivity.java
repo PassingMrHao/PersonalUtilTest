@@ -2,10 +2,13 @@ package com.mrhao.personalutiltest.myactivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.gyf.immersionbar.BarHide;
+import com.gyf.immersionbar.ImmersionBar;
 import com.mrhao.personalutiltest.R;
 import com.mrhao.personalutiltest.myclass.BaseActivity;
 
@@ -19,7 +22,7 @@ import butterknife.ButterKnife;
  * @data: 2019\5\25   15:42
  */
 
-public class ChangeSkinActivity extends BaseActivity {
+public class ChangeSkinActivity extends AppCompatActivity {
 
     @BindView(R.id.img_night)
     ImageView imgNight;
@@ -32,6 +35,7 @@ public class ChangeSkinActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_change_skin);
         ButterKnife.bind(this);
         SharedPreferences sp = getSharedPreferences("Nightstyle", 0);
@@ -41,10 +45,12 @@ public class ChangeSkinActivity extends BaseActivity {
         if (isNightTheme == false) {
             imgNight.setImageResource(R.mipmap.night_close);
             imgNightYueliang.setImageResource(R.mipmap.set_night_style);
+            ImmersionBar.with(this).statusBarDarkFont(true).init();//设置状态栏字体颜色为深色、黑色
             getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);//关闭夜间模式
         } else {
             imgNight.setImageResource(R.mipmap.night_open);
             imgNightYueliang.setImageResource(R.mipmap.set_night_style_white);
+            ImmersionBar.with(this).statusBarDarkFont(false).init();//设置状态栏字体颜色为浅色、白色
             getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);//开启夜间模式
         }
 
@@ -61,14 +67,12 @@ public class ChangeSkinActivity extends BaseActivity {
                     getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);//开启夜间模式，暗色主题
                     editor.putBoolean("isNightTheme", true);
                     editor.commit();//容易忽略
-
                 } else {
                     //关闭夜间模式
+
                     getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);//关闭夜间模式
                     editor.putBoolean("isNightTheme", false);
                     editor.commit();//容易忽略
-
-
 
                 }
             }

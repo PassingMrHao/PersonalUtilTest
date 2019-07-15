@@ -3,9 +3,11 @@ package com.mrhao.personalutiltest.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Rect;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -37,6 +39,24 @@ public class MyUtils {
         return format.format(new Date());//new Date()即获取当前时间
     }
 
+
+
+    //阿拉伯数字转换成汉子
+    public static String toChinese(String str) {
+        String[] s1 = { "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
+        String[] s2 = { "十", "百", "千", "万", "十", "百", "千", "亿", "十", "百", "千" };
+        String result = "";
+        int n = str.length();
+        for (int i = 0; i < n; i++) {
+            int num = str.charAt(i) - '0';
+            if (i != n - 1 && num != 0) {
+                result += s1[num] + s2[n - 2 - i];
+            } else {
+                result += s1[num];
+            }
+        }
+        return result;
+    }
 
 
     /**
@@ -88,6 +108,30 @@ public class MyUtils {
         return (int) (pxValue / scale + 0.5f);
     }
 
+
+    //代码动态弹出软键盘，重要参考：https://blog.csdn.net/lnn368/article/details/51201148
+    public static void openSoftInput(Context context){
+        InputMethodManager imm= (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
+    //代码动态关闭软键盘，重要参考：https://blog.csdn.net/lnn368/article/details/51201148
+    public static void closeSoftInput(Context context){
+        InputMethodManager imm= (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
+    //判断手机是否打开了输入软键盘
+
+    public static  boolean isSoftShowing(Activity activity) {
+        //获取当前屏幕内容的高度
+        int screenHeight = activity.getWindow().getDecorView().getHeight();
+        //获取View可见区域的bottom
+        Rect rect = new Rect();
+        activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(rect);
+
+        return screenHeight - rect.bottom != 0;
+    }
 
 
 

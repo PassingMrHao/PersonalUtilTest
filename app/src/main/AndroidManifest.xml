@@ -22,7 +22,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".myactivity.GradientDrawableActivity"></activity>
+        <activity android:name=".myactivity.PickSeatActivity"></activity>
+        <activity android:name=".myactivity.MySearchBarActivity" />
+        <activity android:name=".myactivity.CopyBiliSearchBarAct" />
+        <activity android:name=".myactivity.EventBusExerciseAct" />
+        <activity android:name=".myactivity.GradientDrawableActivity" />
         <activity
             android:name=".myactivity.ChangeSkinActivity"
             android:theme="@style/myNightTheme2" />
@@ -34,7 +38,9 @@
         <activity android:name=".myactivity.TencentX5WebActivity" />
         <activity android:name=".myactivity.AppUpdateAct" />
         <activity android:name=".myactivity.FunctionDescAct" />
-        <activity android:name=".myactivity.LoadingActivity">
+        <activity
+            android:name=".myactivity.LoadingActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

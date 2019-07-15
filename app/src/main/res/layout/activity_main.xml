@@ -98,121 +98,13 @@
                     android:textSize="14sp" />
 
                 <Button
+                    android:id="@+id/btn_CopybiliSearch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="15sp" />
-
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:alpha="0.7"
-                    android:background="@drawable/btn_greenback"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="15sp" />
-
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:alpha="0.7"
-                    android:background="@drawable/btn_greenback"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="15sp" />
-
-
-                <Button
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:alpha="0.7"
-                    android:background="@drawable/btn_greenback"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="15sp" />
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btn_update"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:alpha="0.7"
-                    android:background="@drawable/btn_greenback"
-                    android:text="版本更新"
-                    android:textColor="#fff"
-                    android:textSize="15sp" />
-
-
-                <Button
-                    android:id="@+id/btn_java"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:alpha="0.7"
-                    android:background="@drawable/btn_greenback"
-                    android:text="HeadFirst》Java随练"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="14sp" />
-
-
-                <Button
-                    android:id="@+id/btn_bootommenu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:alpha="0.7"
-                    android:background="@drawable/btn_greenback"
-                    android:lines="2"
-                    android:text="MD风格BottomNavigationView\n底部菜单/导航栏"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="13sp" />
-
-
-                <Button
-                    android:id="@+id/btn_app_skin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:alpha="0.7"
-                    android:background="@drawable/btn_greenback"
-                    android:text="App换肤/更换主题"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="15sp" />
-
-
-                <Button
-                    android:id="@+id/btn_eventbus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:alpha="0.7"
-                    android:background="@drawable/btn_greenback"
-                    android:text="EventBus用法探究"
+                    android:text="仿哔哩哔哩搜索框"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="18sp" />
@@ -239,7 +131,6 @@
                     android:textColor="#fff"
                     android:textSize="15sp" />
 
-
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -249,24 +140,119 @@
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="15sp" />
-
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:alpha="0.7"
-                    android:background="@drawable/btn_greenback"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="15sp" />
-
-
             </LinearLayout>
 
 
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="版本更新"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="HeadFirst》Java随练"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_bootommenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:lines="2"
+                    android:text="MD风格BottomNavigationView\n底部菜单/导航栏"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_app_skin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="App换肤/更换主题"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_eventbus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="CardView/EventBus探究"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>

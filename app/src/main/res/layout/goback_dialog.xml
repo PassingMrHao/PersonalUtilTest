@@ -4,9 +4,11 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="260dp"
-        android:layout_height="136dp"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
         android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         android:background="@drawable/shape_dialog_ios">
 
         <TextView
@@ -14,20 +16,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="10dp"
             android:text="提示"
             android:textColor="#3c3c3c"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/dia_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="52dp"
+            android:layout_centerInParent="true"
             android:text="即将退出应用"
             android:textColor="#515151"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <View
             android:layout_width="match_parent"
@@ -38,7 +39,7 @@
         <LinearLayout
             android:id="@+id/aa4544"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal">
 
@@ -50,7 +51,7 @@
                 android:gravity="center"
                 android:text="取消"
                 android:textColor="#515151"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="1px"
@@ -65,7 +66,7 @@
                 android:gravity="center"
                 android:text="确定"
                 android:textColor="#DC4C3F"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
     </RelativeLayout>

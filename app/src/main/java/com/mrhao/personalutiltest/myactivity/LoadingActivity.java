@@ -1,6 +1,7 @@
 package com.mrhao.personalutiltest.myactivity;
 
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,7 +16,7 @@ import com.mrhao.personalutiltest.myclass.BaseActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class LoadingActivity extends BaseActivity {
+public class LoadingActivity extends Activity {
 
     @BindView(R.id.start_img)
     ImageView startImg;

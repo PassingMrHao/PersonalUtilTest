@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66F6DA9B"
+    android:orientation="vertical"
+    tools:context=".myactivity.CopyBiliSearchBarAct">
+
+    <include layout="@layout/activity_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="45dp">
+
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/tvback_line"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Search1"
+                android:textColor="#333"
+                android:textSize="19sp" />
+
+
+            <TextView
+                android:id="@+id/tv_showresult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:text="Show Search1 Result"
+                android:textSize="20sp" />
+
+
+
+            <TextView
+                android:id="@+id/my_searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/tvback_line"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="自定义搜索框"
+                android:textColor="#333"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/load_svgr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/tvback_line"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="加载svg图片(带交互)"
+                android:textColor="#333"
+                android:textSize="19sp" />
+
+
+
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <km.lmy.searchview.SearchView
+                android:id="@+id/my_searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp"
+                app:defaultState="open"
+                app:hintText="请输入想要检索的结果" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/search" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

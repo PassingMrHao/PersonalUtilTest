@@ -2,6 +2,7 @@ package com.mrhao.personalutiltest.myactivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -41,7 +42,7 @@ public class AppUpdateAct extends BaseActivity {
     ImageView updatePoint;
     @BindView(R.id.bugly_up_point)
     TextView buglyUpPoint;
-
+    UpgradeInfo upgradeInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +56,7 @@ public class AppUpdateAct extends BaseActivity {
     //检查应用更新信息
     private void CheckAPPUpdate() {
 
-        UpgradeInfo upgradeInfo = Beta.getUpgradeInfo();//获取本地已有升级策略（非实时，可用于界面红点展示）
+
         if (upgradeInfo == null) {
             //无升级信息
             updatePoint.setImageResource(R.mipmap.up_graypoint);
@@ -70,7 +71,6 @@ public class AppUpdateAct extends BaseActivity {
                 if (XXPermissions.isHasPermission(AppUpdateAct.this, Permission.WRITE_EXTERNAL_STORAGE, Permission.WRITE_EXTERNAL_STORAGE) == true) {
 
                     Beta.checkUpgrade();//调用此方法手动检查应用
-
 
                 } else {
 
@@ -148,6 +148,9 @@ public class AppUpdateAct extends BaseActivity {
 
     //获取必要权限
     private void getImportPerssion() {
+
+        upgradeInfo= Beta.getUpgradeInfo();//获取本地已有升级策略（非实时，可用于界面红点展示）
+
 
         XXPermissions.with(AppUpdateAct.this)
                 .permission(Permission.WRITE_EXTERNAL_STORAGE, Permission.READ_EXTERNAL_STORAGE)

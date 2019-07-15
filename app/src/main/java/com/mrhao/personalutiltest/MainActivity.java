@@ -8,7 +8,9 @@ import android.widget.Button;
 import com.mrhao.personalutiltest.myactivity.AppUpdateAct;
 import com.mrhao.personalutiltest.myactivity.BottomNavActivity;
 import com.mrhao.personalutiltest.myactivity.ChangeSkinActivity;
+import com.mrhao.personalutiltest.myactivity.CopyBiliSearchBarAct;
 import com.mrhao.personalutiltest.myactivity.DrawerLayoutActivity;
+import com.mrhao.personalutiltest.myactivity.EventBusExerciseAct;
 import com.mrhao.personalutiltest.myactivity.FunctionDescAct;
 import com.mrhao.personalutiltest.myactivity.GradientDrawableActivity;
 import com.mrhao.personalutiltest.myactivity.JavaExeActivity;
@@ -41,6 +43,10 @@ public class MainActivity extends BaseActivity {
     Button btnAppSkin;
     @BindView(R.id.btn_gradraw)
     Button btnGradraw;
+    @BindView(R.id.btn_eventbus)
+    Button btnEventbus;
+    @BindView(R.id.btn_CopybiliSearch)
+    Button btnCopybiliSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +54,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setBaseEvent();
-
     }
 
 
@@ -134,19 +139,38 @@ public class MainActivity extends BaseActivity {
         });
 
 
+        //Eventbus用法探究
+        btnEventbus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, EventBusExerciseAct.class));
+            }
+        });
+
+
+        //仿bilibili搜索框
+        btnCopybiliSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CopyBiliSearchBarAct.class));
+            }
+        });
+
+
     }
+
 
 
     @Override
     public void onBackPressed() {
-
         CopyIOSDialog.showDialog(this, new FinishActIne() {
             @Override
             public void finishAct() {
                 finish();
-
             }
         });
-
     }
+
+
+
 }

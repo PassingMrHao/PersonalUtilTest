@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mrhao.personalutiltest.widget.ClearEditext
+            android:id="@+id/mysearch_editext"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="62dp"
+            android:background="@null"
+            android:hint="请输入想要检索的内容"
+            android:textColor="#707070"
+            android:textColorHint="#bfbfbf"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/search_Button"
+            android:layout_width="56dp"
+            android:layout_height="42dp"
+            android:layout_gravity="right"
+            android:background="#FF7460">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/editext_search" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/histroy_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_gravity="right"
+                android:id="@+id/search_delete_histroy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:text="清空搜索记录"
+                android:textColor="#9f9f9f" />
+            <com.mrhao.personalutiltest.widget.SearchListView
+                android:id="@+id/search_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
