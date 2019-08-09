@@ -81,6 +81,7 @@ public class BottomNavActivity extends AppCompatActivity {
                         break;
                 }
                 return false;
+
             }
         });
 

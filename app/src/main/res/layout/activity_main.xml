@@ -213,6 +213,8 @@
 
 
                 <Button
+                    android:text="图片压缩(bitmap)"
+                    android:id="@+id/btn_bitmap_compress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"

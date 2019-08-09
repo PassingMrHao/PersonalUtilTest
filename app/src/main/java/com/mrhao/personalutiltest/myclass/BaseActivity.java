@@ -2,9 +2,19 @@ package com.mrhao.personalutiltest.myclass;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
 import com.gyf.immersionbar.ImmersionBar;
 
+import org.greenrobot.eventbus.EventBus;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
 public class BaseActivity extends AppCompatActivity {
+
+
 
 
     @Override
@@ -17,7 +27,21 @@ public class BaseActivity extends AppCompatActivity {
 //                .autoNavigationBarDarkModeEnable(true, 0.2f) //自动导航栏图标变色，必须指定导航栏颜色才可以自动变色哦
                 .navigationBarDarkIcon(true) //导航栏图标是深色，不写默认为亮色
                 .init();
+
     }
 
+    @Override
+    protected void onStop() {
+
+        super.onStop();
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+
+    }
 
 }

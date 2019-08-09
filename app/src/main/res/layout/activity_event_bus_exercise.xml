@@ -9,6 +9,33 @@
 
     <include layout="@layout/activity_title" />
 
+
+
+    <TextView
+        android:id="@+id/bus_tv"
+        android:text="EventBus_PassEvent_Listener"
+        android:textSize="18sp"
+        android:textColor="#DD4F43"
+        android:gravity="center"
+        android:layout_marginTop="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/btn_eventbusTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_greenback"
+        android:text="EventBus_TestButton"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

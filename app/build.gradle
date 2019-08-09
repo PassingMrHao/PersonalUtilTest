@@ -68,4 +68,8 @@ dependencies {
     //仿哔哩哔哩搜索框二：GitHub项目地址： https://github.com/limuyang2/CardSearchView
     implementation 'com.github.limuyang2:CardSearchView:1.1.0.1'
 
+    //EventBus (GitHub项目地址---->：https://github.com/greenrobot/EventBus )
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+
 }
