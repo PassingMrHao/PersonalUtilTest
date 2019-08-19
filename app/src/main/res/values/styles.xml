@@ -38,7 +38,6 @@
 
 
 
-
     <style name="myNightTheme2" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>

@@ -22,7 +22,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".myactivity.BitMapCompressActivity"></activity>
+        <activity android:name=".myactivity.PhotoCropActivity"></activity>
+        <activity android:name=".myactivity.BitMapCompressActivity" />
         <activity android:name=".myactivity.EventBusExerciseAct2" />
         <activity android:name=".myactivity.PickSeatActivity" />
         <activity android:name=".myactivity.MySearchBarActivity" />

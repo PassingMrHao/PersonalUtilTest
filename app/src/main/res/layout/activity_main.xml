@@ -111,6 +111,8 @@
 
 
                 <Button
+                    android:id="@+id/btn_crop_photoImg"
+                    android:text="裁剪相册图片,获取file"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
@@ -118,7 +120,7 @@
                     android:background="@drawable/btn_greenback"
                     android:textAllCaps="false"
                     android:textColor="#fff"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
 
                 <Button

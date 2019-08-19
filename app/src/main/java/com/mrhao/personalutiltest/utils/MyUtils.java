@@ -9,6 +9,7 @@ import android.util.DisplayMetrics;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -31,7 +32,7 @@ public class MyUtils {
      * @CreatData: 2019\5\9  14:46
      */
     public static String getTimeNow(String dataType) {
-        if(TextUtils.isEmpty(dataType)){
+        if (TextUtils.isEmpty(dataType)) {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
             return format.format(new Date());
         }
@@ -39,12 +40,25 @@ public class MyUtils {
         return format.format(new Date());//new Date()即获取当前时间
     }
 
+    //获取指定日期时间戳，日期格式："2018-09-29"
+    public static long TimesTamp(String riqi) {
+        Date date = null;
+        try {
+            SimpleDateFormat format =  new SimpleDateFormat("yyyy-MM-dd");
+            String time=riqi;
+            date = format.parse(time);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return date.getTime();
+    }
 
 
     //阿拉伯数字转换成汉子
     public static String toChinese(String str) {
-        String[] s1 = { "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
-        String[] s2 = { "十", "百", "千", "万", "十", "百", "千", "亿", "十", "百", "千" };
+        String[] s1 = {"零", "一", "二", "三", "四", "五", "六", "七", "八", "九"};
+        String[] s2 = {"十", "百", "千", "万", "十", "百", "千", "亿", "十", "百", "千"};
         String result = "";
         int n = str.length();
         for (int i = 0; i < n; i++) {
@@ -61,6 +75,7 @@ public class MyUtils {
 
     /**
      * 获得屏幕高度
+     *
      * @param context
      * @return
      */
@@ -75,6 +90,7 @@ public class MyUtils {
 
     /**
      * 获得屏幕宽度
+     *
      * @param context
      * @return
      */
@@ -88,6 +104,7 @@ public class MyUtils {
 
     /**
      * 获取屏幕密度
+     *
      * @param context
      * @return
      */
@@ -97,33 +114,33 @@ public class MyUtils {
 
 
     //获取最终想要得到的dp值对应的int型基本函数
-    public static int dip2px(float dpValue,Context context) {
+    public static int dip2px(float dpValue, Context context) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }
 
     //获取最终想要得到的px值对应的int型基本函数
-    public static int px2dip(float pxValue,Context context) {
+    public static int px2dip(float pxValue, Context context) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
     }
 
 
     //代码动态弹出软键盘，重要参考：https://blog.csdn.net/lnn368/article/details/51201148
-    public static void openSoftInput(Context context){
-        InputMethodManager imm= (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+    public static void openSoftInput(Context context) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
     //代码动态关闭软键盘，重要参考：https://blog.csdn.net/lnn368/article/details/51201148
-    public static void closeSoftInput(Context context){
-        InputMethodManager imm= (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+    public static void closeSoftInput(Context context) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
     //判断手机是否打开了输入软键盘
 
-    public static  boolean isSoftShowing(Activity activity) {
+    public static boolean isSoftShowing(Activity activity) {
         //获取当前屏幕内容的高度
         int screenHeight = activity.getWindow().getDecorView().getHeight();
         //获取View可见区域的bottom
@@ -132,8 +149,6 @@ public class MyUtils {
 
         return screenHeight - rect.bottom != 0;
     }
-
-
 
 
 }

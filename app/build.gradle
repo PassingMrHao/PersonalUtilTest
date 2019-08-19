@@ -31,45 +31,46 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
     //注解 --- ButterKnife注解库：https://github.com/JakeWharton/butterknife
     implementation 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
-
     //权限申请2(群主Android轮子哥，维护中) https://github.com/getActivity/XXPermissions
     implementation 'com.hjq:xxpermissions:5.5'
-
     //implementation 'com.tencent.bugly:crashreport:latest.release'  //Bugly异常上报 SDK库
-
     //腾讯bugly升级SDK(已包含异常上报)
     implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
     //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
     implementation 'com.tencent.bugly:nativecrashreport:latest.release'
     //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
-
     //仿_QQ6.x侧滑菜单
     implementation 'com.github.bestTao:CoordinatorMenu:v1.0.2'
-
     // 沉浸式状态栏基础依赖包，必须要依赖
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta02'
-
     //design-包含MD风格控件
-    implementation "com.android.support:design:28.0.0"
-
+    implementation 'com.android.support:design:28.0.0'
     //仿哔哩哔哩搜索框，GitHub项目地址： https://github.com/wenwenwen888/SearchDialog#license
     implementation 'com.wenwenwen888:searchbox:1.0.1'
-
     //仿哔哩哔哩搜索框二：GitHub项目地址： https://github.com/limuyang2/CardSearchView
     implementation 'com.github.limuyang2:CardSearchView:1.1.0.1'
-
     //EventBus (GitHub项目地址---->：https://github.com/greenrobot/EventBus )
     implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation project(':imagepicker')
 
+
+    //Glide-加载图片:!!! 4.x使用方法重要参考：https://blog.csdn.net/hanxiongwei/article/details/86625333
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+    //网络请求+数据解析(常用组合)
+    //网络请求
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    //gson-json解析—> https://github.com/google/gson
+    implementation 'com.google.code.gson:gson:2.8.5'
 
 }

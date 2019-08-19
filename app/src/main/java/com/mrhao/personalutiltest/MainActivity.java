@@ -15,6 +15,7 @@ import com.mrhao.personalutiltest.myactivity.EventBusExerciseAct;
 import com.mrhao.personalutiltest.myactivity.FunctionDescAct;
 import com.mrhao.personalutiltest.myactivity.GradientDrawableActivity;
 import com.mrhao.personalutiltest.myactivity.JavaExeActivity;
+import com.mrhao.personalutiltest.myactivity.PhotoCropActivity;
 import com.mrhao.personalutiltest.myactivity.TencentX5WebActivity;
 import com.mrhao.personalutiltest.myactivity.WaterRippleActivity;
 import com.mrhao.personalutiltest.myclass.BaseActivity;
@@ -50,6 +51,8 @@ public class MainActivity extends BaseActivity {
     Button btnCopybiliSearch;
     @BindView(R.id.btn_bitmap_compress)
     Button btnBitmapCompress;
+    @BindView(R.id.btn_crop_photoImg)
+    Button btnCropPhotoImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -164,6 +167,14 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, BitMapCompressActivity.class));
+            }
+        });
+
+        //打开相册选取相片进行裁剪，获得file图片文件
+        btnCropPhotoImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PhotoCropActivity.class));
             }
         });
 
