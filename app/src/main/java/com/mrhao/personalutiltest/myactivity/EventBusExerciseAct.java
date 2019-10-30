@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.mrhao.personalutiltest.R;
 import com.mrhao.personalutiltest.myclass.BaseActivity;
+import com.mrhao.personalutiltest.utils.MyToastUtils;
 import com.mrhao.personalutiltest.widget.MessageEvent;
 
 import org.greenrobot.eventbus.EventBus;
@@ -30,6 +31,12 @@ public class EventBusExerciseAct extends BaseActivity {
     Button btnEventbusTest;
     @BindView(R.id.bus_tv)
     TextView busTv;
+    @BindView(R.id.mytoast_img)
+    Button mytoastImg;
+    @BindView(R.id.mytoast_sign)
+    Button mytoastSign;
+    @BindView(R.id.html_webtext)
+    Button htmlWebtext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +65,34 @@ public class EventBusExerciseAct extends BaseActivity {
             public void onClick(View v) {
 
                 startActivity(new Intent(EventBusExerciseAct.this, EventBusExerciseAct2.class));
+            }
+        });
+
+
+        //Toast图片
+        mytoastImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                new MyToastUtils(EventBusExerciseAct.this).ToastImg(R.mipmap.huojian_blue);
+            }
+        });
+
+
+        //Toast自定义布局
+        mytoastSign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new MyToastUtils(EventBusExerciseAct.this).showMyTosat(R.layout.toast_sign_layout);
+            }
+        });
+
+
+        //加载HTML文本
+        htmlWebtext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(EventBusExerciseAct.this, HtmlWebTextActivity.class));
             }
         });
 

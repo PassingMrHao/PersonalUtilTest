@@ -16,9 +16,20 @@ buildscript {
 
 allprojects {
     repositories {
+
+        // 支付宝 SDK AAR 包所需的配置
+        flatDir {
+            dirs 'libs'
+        }
+
+
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
+
+//        //圆角布局画布 私有仓库地址
+//        maven { url "http://lib.gcssloop.com:8081/repository/gcssloop-central/" }
+
     }
 }
 

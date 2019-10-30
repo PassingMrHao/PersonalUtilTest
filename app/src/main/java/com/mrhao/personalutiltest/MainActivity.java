@@ -13,11 +13,17 @@ import com.mrhao.personalutiltest.myactivity.CopyBiliSearchBarAct;
 import com.mrhao.personalutiltest.myactivity.DrawerLayoutActivity;
 import com.mrhao.personalutiltest.myactivity.EventBusExerciseAct;
 import com.mrhao.personalutiltest.myactivity.FunctionDescAct;
+import com.mrhao.personalutiltest.myactivity.FunctionTestActivity;
 import com.mrhao.personalutiltest.myactivity.GradientDrawableActivity;
+import com.mrhao.personalutiltest.myactivity.JZVideoPlayerActivity;
 import com.mrhao.personalutiltest.myactivity.JavaExeActivity;
 import com.mrhao.personalutiltest.myactivity.PhotoCropActivity;
+import com.mrhao.personalutiltest.myactivity.QrCodeImgActivity;
+import com.mrhao.personalutiltest.myactivity.RadioButtonActivity;
 import com.mrhao.personalutiltest.myactivity.TencentX5WebActivity;
 import com.mrhao.personalutiltest.myactivity.WaterRippleActivity;
+import com.mrhao.personalutiltest.myactivity.WebViewJsPassMsgActivity;
+import com.mrhao.personalutiltest.myactivity.ZfbPayTestActivity;
 import com.mrhao.personalutiltest.myclass.BaseActivity;
 import com.mrhao.personalutiltest.myinterface.FinishActIne;
 import com.mrhao.personalutiltest.utils.CopyIOSDialog;
@@ -53,6 +59,18 @@ public class MainActivity extends BaseActivity {
     Button btnBitmapCompress;
     @BindView(R.id.btn_crop_photoImg)
     Button btnCropPhotoImg;
+    @BindView(R.id.btn_videoPlay)
+    Button btnVideoPlay;
+    @BindView(R.id.btn_functionTest)
+    Button btnFunctionTest;
+    @BindView(R.id.btn_zhifubaoPay)
+    Button btnZhifubaoPay;//支付宝支付
+    @BindView(R.id.btn_danfuchoose)
+    Button btnDanfuchoose; //单复选框
+    @BindView(R.id.web_test_h5)
+    Button webTestH5;
+    @BindView(R.id.btn_creatEwm)
+    Button btnCreatEwm;//生成带logo的二维码图片
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,7 +163,7 @@ public class MainActivity extends BaseActivity {
         });
 
 
-        //Eventbus用法探究
+        //Eventbus用法探究+Cardview
         btnEventbus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -177,6 +195,61 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(MainActivity.this, PhotoCropActivity.class));
             }
         });
+
+        //节操/饺子播放器
+        btnVideoPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, JZVideoPlayerActivity.class));
+            }
+        });
+
+
+        //小功能练习：点赞动画效果等
+        btnFunctionTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FunctionTestActivity.class));
+
+            }
+        });
+
+
+        //支付宝支付
+        btnZhifubaoPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ZfbPayTestActivity.class));
+            }
+        });
+
+        //单选框+多选框
+        btnDanfuchoose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RadioButtonActivity.class));
+            }
+        });
+
+
+        //webview和js交互：相互传值
+        webTestH5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, WebViewJsPassMsgActivity.class));
+            }
+        });
+
+        //生成带logo的二维码图片
+        btnCreatEwm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, QrCodeImgActivity.class));
+
+            }
+        });
+
 
     }
 

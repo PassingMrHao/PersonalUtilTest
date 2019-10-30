@@ -3,6 +3,7 @@ package com.mrhao.personalutiltest.myactivity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -47,9 +48,9 @@ public class BitMapCompressActivity extends AppCompatActivity {
 
 
     private void setBaseEvent() {
-        //测量bitmap图片大小
+        //测量bitmap图片大小 重要参考：https://blog.csdn.net/smileiam/article/details/68946182
         bit = BitmapFactory.decodeResource(getResources(), R.mipmap.img_compress_test);
-        picSize.setText(bit.getByteCount() / 1024 + " Kb(" + bit.getByteCount() / 1024 / 1024 + " Mb)");
+        picSize.setText(getBitmapSize(bit) / 1024 + " Kb(" + getBitmapSize(bit) / 1024 / 1024 + " Mb)");
 
 
         //缩放压缩法
@@ -82,6 +83,18 @@ public class BitMapCompressActivity extends AppCompatActivity {
         });
 
 
+    }
+
+
+
+    public int getBitmapSize(Bitmap bitmap){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){     //API 19
+            return bitmap.getAllocationByteCount();
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR1){//API 12
+            return bitmap.getByteCount();
+        } else {
+            return bitmap.getRowBytes() * bitmap.getHeight(); //earlier version
+        }
     }
 
 

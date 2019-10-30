@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.mrhao.personalutiltest"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0.0"
@@ -14,7 +14,13 @@ android {
             abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
         }
     }
+    compileOptions {
 
+        sourceCompatibility JavaVersion.VERSION_1_8
+
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -62,7 +68,6 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation project(':imagepicker')
 
-
     //Glide-加载图片:!!! 4.x使用方法重要参考：https://blog.csdn.net/hanxiongwei/article/details/86625333
     implementation 'com.github.bumptech.glide:glide:4.3.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
@@ -72,5 +77,16 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
     //gson-json解析—> https://github.com/google/gson
     implementation 'com.google.code.gson:gson:2.8.5'
+
+    //饺子视频播放器 ，GitHub地址：https://github.com/lipangit/JiaoZiVideoPlayer
+    //API使用文档：https://juejin.im/post/5cb837f1518825329f6cf300  、  https://shimo.im/docs/xj5F85W1gqEEBXRJ/read
+    implementation 'cn.jzvd:jiaozivideoplayer:7.0.5'
+
+//    //圆角布局画布
+//    implementation 'com.gcssloop.widget:rclayout:1.8.1'
+
+    // 支付宝 SDK AAR 包所需的配置
+    implementation(name: 'alipaySdk-15.6.5-20190718211148', ext: 'aar')
+
 
 }

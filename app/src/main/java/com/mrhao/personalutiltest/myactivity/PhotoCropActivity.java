@@ -88,15 +88,12 @@ public class PhotoCropActivity extends BaseActivity {
                             public void onError(Call call, Exception e, int id) {
                                 Log.e("sadhjak164654", "请求失败: " + e.getMessage());
                             }
-
                             @Override
                             public void onResponse(String response, int id) {
-
                                 // 图片拼接：http://47.52.169.82/public
                                 Log.w("6969696969asdasd", "onResponse: " + response.toString());
                             }
                         });
-
             }
         });
 
@@ -104,7 +101,6 @@ public class PhotoCropActivity extends BaseActivity {
         chooseDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 new DateDialog.Builder(PhotoCropActivity.this)
                         .setTitle("请选择日期")
                         .setListener(new DateDialog.OnListener() {
@@ -112,14 +108,12 @@ public class PhotoCropActivity extends BaseActivity {
                             public void onSelected(Dialog dialog, int year, int month, int day) {
                                 Toast.makeText(PhotoCropActivity.this,year + "年" + month + "月" + day + "日",Toast.LENGTH_SHORT).show();
                             }
-
                             @Override
                             public void onCancel(Dialog dialog) {
                                 Toast.makeText(PhotoCropActivity.this,"取消了",Toast.LENGTH_SHORT).show();
                             }
                         })
                         .show();
-
             }
         });
 

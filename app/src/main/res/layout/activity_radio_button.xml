@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".myactivity.RadioButtonActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="配送方式"
+        android:textColor="#32353E"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/group_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <RadioButton
+            android:id="@+id/rb_youji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blackline"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="邮寄"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_qupiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blackline"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="现场取票"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_yanpiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blackline"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="电子验票"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/group_choose2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <RadioButton
+            android:id="@+id/rb_youji2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="邮寄"
+            android:textColor="@drawable/colorchoose"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_qupiao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="现场取票"
+            android:textColor="@drawable/colorchoose"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_yanpiao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="电子验票"
+            android:textColor="@drawable/colorchoose"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+
+    <!-- 动态添加 item_button -->
+
+    <TextView
+        android:id="@+id/add_groupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_huiyuanline"
+        android:paddingLeft="28dp"
+        android:paddingTop="5dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="5dp"
+        android:text="动态添加item选项，横向滚动"
+        android:textColor="@color/huiyuan_tvcolor"
+        android:textSize="17sp" />
+
+
+    <!-- 横向滚动条 -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:scrollbars="none">
+
+        <RadioGroup
+            android:id="@+id/group_choose3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:padding="12dp" />
+
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_daojishi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="2天  16:54:32 S"
+        android:textColor="@color/huiyuan_tvcolor"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/daojishi_method1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_huiyuanline"
+        android:paddingLeft="28dp"
+        android:paddingTop="5dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="5dp"
+        android:text="倒计时方法1：Handler与Thread(不占UI线程)"
+        android:textColor="@color/huiyuan_tvcolor"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tv_daojishi2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="2天  16:54:32 S"
+        android:textColor="@color/huiyuan_tvcolor"
+        android:textSize="22sp" />
+    <TextView
+        android:id="@+id/daojishi_method2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_huiyuanline"
+        android:paddingLeft="28dp"
+        android:paddingTop="5dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="5dp"
+        android:text="倒计时方法2：Handler与Runnable"
+        android:textColor="@color/huiyuan_tvcolor"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

@@ -45,7 +45,6 @@
                     android:textColor="#fff"
                     android:textSize="15sp" />
 
-
                 <Button
                     android:id="@+id/Tencent_X5Webview"
                     android:layout_width="match_parent"
@@ -112,23 +111,50 @@
 
                 <Button
                     android:id="@+id/btn_crop_photoImg"
-                    android:text="裁剪相册图片,获取file"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text="裁剪相册图片,获取file"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="14sp" />
 
 
                 <Button
+                    android:id="@+id/btn_functionTest"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text="小功能练习：点赞效果等"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_danfuchoose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="RadioButton单选/CheckBox多选框练习"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+                <!-- 生成带LOGO的二维码图片-->
+                <Button
+                    android:id="@+id/btn_creatEwm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="生成带logo的二维码"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="15sp" />
@@ -139,6 +165,18 @@
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text=""
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="15sp" />
@@ -215,13 +253,49 @@
 
 
                 <Button
-                    android:text="图片压缩(bitmap)"
                     android:id="@+id/btn_bitmap_compress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text="图片压缩(bitmap)"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_videoPlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="饺子/节操视频播放器"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_zhifubaoPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="支付宝支付"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/web_test_h5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/btn_greenback"
+                    android:text="webviewTest"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="15sp" />
@@ -232,6 +306,7 @@
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text=""
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="15sp" />
@@ -242,6 +317,7 @@
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text=""
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="15sp" />
@@ -252,6 +328,7 @@
                     android:layout_marginTop="28dp"
                     android:alpha="0.7"
                     android:background="@drawable/btn_greenback"
+                    android:text=""
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="15sp" />

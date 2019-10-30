@@ -43,6 +43,9 @@ public class X5WebViewLoadUtil {
         tencentWeb.getSettings().setDisplayZoomControls(true); //隐藏原生的缩放控件
         tencentWeb.getSettings().setBlockNetworkImage(false);//解决图片不显示
 
+        tencentWeb.getSettings().setTextZoom(100);
+
+
         // 加快HTML网页加载完成的速度，等页面finish再加载图片
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             webSetting.setLoadsImagesAutomatically(true);

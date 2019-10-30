@@ -88,46 +88,54 @@
 
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+
+
+
+
+            <Button
+                android:id="@+id/mytoast_img"
                 android:layout_width="match_parent"
-                android:layout_height="128dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="28dp"
                 android:layout_marginRight="18dp"
-                app:cardBackgroundColor="#DD4F43"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="8dp">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_greenback"
+                android:text="Toast个图片"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="CardViewTest3"
-                    android:textColor="#fff"
-                    android:textSize="22sp" />
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
+            <Button
+                android:id="@+id/mytoast_sign"
                 android:layout_width="match_parent"
-                android:layout_height="128dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="18dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="28dp"
                 android:layout_marginRight="18dp"
-                android:layout_marginBottom="36dp"
-                app:cardBackgroundColor="#2ECFE0"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="8dp">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_greenback"
+                android:text="Toast 自定义布局"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="CardViewTest4"
-                    android:textColor="#fff"
-                    android:textSize="22sp" />
 
-            </android.support.v7.widget.CardView>
+
+
+            <Button
+                android:id="@+id/html_webtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_greenback"
+                android:text="加载HTML文本测试"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+
 
 
         </LinearLayout>

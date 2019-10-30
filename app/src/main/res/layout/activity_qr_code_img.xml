@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".myactivity.QrCodeImgActivity">
+
+    <include layout="@layout/activity_title" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/creat_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btn_greenback"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:text="生成二维码"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

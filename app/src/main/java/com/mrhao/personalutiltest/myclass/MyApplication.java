@@ -34,7 +34,7 @@ public class MyApplication extends Application {
         initImagePicker();//打开相册，相片裁切初始化
 
         //沉浸式标题栏(Activity)，需要适配全面屏和刘海屏，
-        // 在manifest的Application节点中加入  android:resizeableActivity="true"
+        //在manifest的Application节点中加入  android:resizeableActivity="true"
     }
 
     /**

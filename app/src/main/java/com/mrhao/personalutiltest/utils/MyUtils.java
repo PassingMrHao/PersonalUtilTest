@@ -51,7 +51,7 @@ public class MyUtils {
             e.printStackTrace();
         }
 
-        return date.getTime();
+        return date.getTime()/1000;
     }
 
 
@@ -149,6 +149,45 @@ public class MyUtils {
 
         return screenHeight - rect.bottom != 0;
     }
+
+    //将时间戳转化为天/时/分/秒
+    public static String formatDuring2(long activityTime) {
+        long mss = activityTime - (System.currentTimeMillis()/1000);
+        if(mss<=0){
+            return  "----";
+        }
+        long days = mss / ( 60 * 60 * 24);
+        long hours = (mss % ( 60 * 60 * 24)) / ( 60 * 60);
+        long minutes = (mss % ( 60 * 60)) / ( 60);
+        long seconds = (mss % 60) ;
+
+        String d=days+"";
+        String h=hours+"";
+        String m=minutes+"";
+        String s=seconds+"";
+
+        if(hours<10){
+            h="0"+hours;
+        }
+
+        if(minutes<10){
+            m="0"+minutes;
+        }
+
+        if(seconds<10){
+            s="0"+seconds;
+        }
+
+        if(mss>=86400){
+
+            return d + "天 " + h + ":" + m + ":"+s+"s";
+        }else {
+            return  h+ ":" + m + ":"+s+"s";
+        }
+
+    }
+
+
 
 
 }

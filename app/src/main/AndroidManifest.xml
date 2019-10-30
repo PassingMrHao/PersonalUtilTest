@@ -22,7 +22,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".myactivity.PhotoCropActivity"></activity>
+        <activity android:name=".myactivity.QrCodeImgActivity"></activity>
+        <activity android:name=".myactivity.WebViewJsPassMsgActivity" />
+        <activity android:name=".myactivity.RadioButtonActivity" />
+        <activity android:name=".myactivity.ZfbPayTestActivity" />
+        <activity android:name=".myactivity.FunctionTestActivity" />
+        <activity android:name=".myactivity.HtmlWebTextActivity" />
+        <activity
+            android:name=".myactivity.JZVideoPlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".myactivity.PhotoCropActivity" />
         <activity android:name=".myactivity.BitMapCompressActivity" />
         <activity android:name=".myactivity.EventBusExerciseAct2" />
         <activity android:name=".myactivity.PickSeatActivity" />
